@@ -58,11 +58,7 @@ function ScannerResult({ navigation }){
         <Text style={styles.textscanner}><Text style={styles.textbold}>{"\n"}Brand: </Text>{brand.toUpperCase()}</Text>         
         <Text style={styles.textscanner}><Text style={styles.textbold}>{"\n"}Additional Delegates</Text></Text>         
           {deligate.map((name,key)=>(         
-
                <Text style={styles.textscanner} key={key}>{key+1}. <Text>{name}</Text></Text>
-           
-           
-           
             ))}
           { animatingStatue === true ? 
             <ActivityIndicator size="large" color="#000000"  />        
@@ -74,9 +70,7 @@ function ScannerResult({ navigation }){
               
         </View> 
     );
-  }
-
-   // msg
+  } 
   const Datamsg = () => {
       return (
          <View style={styles.flashMessage}>
@@ -109,10 +103,6 @@ function ScannerResult({ navigation }){
   const [animatingStatue, setanimatingStatue] = React.useState(false);
 
   const [deligate, setdelegates] = React.useState([]);
-
-  
-
-
 
   onRead = async (e) => {   
     
